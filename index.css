@@ -1,11 +1,18 @@
 body {
-    background-color: black;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapercave.com%2Fwp%2F4DuYKpW.jpg&f=1&nofb=1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-
+/* Header */
 header {
     background-color: #FFE81F;
     height: 70px;
     text-align: center;
+}
+
+#header_logo {
+    position: absolute;
 }
 
 

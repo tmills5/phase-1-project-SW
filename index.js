@@ -12,6 +12,8 @@ const starshipsUrl = "https://swapi.dev/api/starships/"
 //const speciesUrl = "https://swapi.dev/api/species/"
 const planetsUrl = "https://swapi.dev/api/planets/"
 
+
+
 // document.addEventListener("DOMContentLoaded", fetchInfo);
 
 // function fetchInfo () {
@@ -23,4 +25,6 @@ const planetsUrl = "https://swapi.dev/api/planets/"
 // }
 // fetchInfo();
 
-//
+document.button.tablink.addEventListener("click", () => {
+  
+})

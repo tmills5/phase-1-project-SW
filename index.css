@@ -3,7 +3,34 @@ body {
 }
 
 header {
-    background-color: yellow;
-    height: 100px;
+    background-color: #FFE81F;
+    height: 70px;
     text-align: center;
 }
+
+
+/* navigation buttons */
+.tablink {
+    background-color: #FFE81F;
+    color: #000000;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* styling the buttons */
+  .tabcontent {
+    color: #000000;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  

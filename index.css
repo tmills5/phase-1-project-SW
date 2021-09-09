@@ -4,7 +4,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-/* Header */
+/*----------------------Header------------------*/
 header {
     background-color: #FFE81F;
     height: 70px;
@@ -16,7 +16,7 @@ header {
 }
 
 
-/* navigation buttons */
+/*-----------------navigation buttons----------------*/
 .tablink {
     background-color: #FFE81F;
     color: #000000;
@@ -41,3 +41,18 @@ header {
     text-align: center;
   }
   
+/*---------------people list div-----------------*/
+
+#item-list {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgba(138, 226, 30, 0.873);
+  /* background-color: aqua; */
+  text-align: center;
+  list-style-type: none;
+  padding: 70px;
+}
+
+li {
+  font-size: 35px;
+  padding: 10px;
+}

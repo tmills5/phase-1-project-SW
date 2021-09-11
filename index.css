@@ -9,6 +9,7 @@ header {
     background-color: #FFE81F;
     height: 70px;
     text-align: center;
+    /* position: fixed; */
 }
 
 #header_logo {
@@ -42,7 +43,24 @@ header {
   }
   
 /*---------------people list div-----------------*/
+#list-collection {
+  margin: 2rem;
+}
+.card {
+  background-color: white;
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52
+}
 
+h3 {
+  color:rgba(138, 226, 30, 0.873)
+}
 #item-list {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgba(138, 226, 30, 0.873);

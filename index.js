@@ -14,10 +14,11 @@ const planetsUrl = "https://swapi.dev/api/planets/"
 //const speciesUrl = "https://swapi.dev/api/species/"
 
 const peopleBtn = document.getElementById("people-btn")
-const itemList = document.getElementById("item-list")
+//const itemList = document.getElementById("item-list")
 const filmsBtn = document.getElementById("films-btn")
 const starshipsBtn = document.getElementById("starships-btn")
 const planetsBtn = document.getElementById("planets-btn")
+const listCollection = document.getElementById("list-collection")
 
 
 //EVENT HANDLERS / FETCH HANDLERS-----------------------------
@@ -86,43 +87,71 @@ const fetchAllPlanets = () => {
 
 const renderEachPerson = person => {
   const {name, gender, hair_color, skin_color, height} = person  //what shows up to user
-  const personLi = document.createElement("li")
-  personLi.innerText = `${name} 
-    Gender: ${gender}
-    Hair: ${hair_color}
-    Skin: ${skin_color}
-    Height: ${height}`
-  itemList.append(personLi)
+  //const personLi = document.createElement("li")
+  const characterCard = document.createElement("div");
+  characterCard.className = ("card")
+  //const charName = document.createElement("h3")
+  //charName.textContent = `${person.name}`;
+   characterCard.innerText = `${name}
+   Gender: ${gender}
+   Hair: ${hair_color}
+   Skin: ${skin_color}
+   Height: ${height}`
+  //itemList.append(personLi)
+  listCollection.append(characterCard)
 }
 
 const renderEachFilm = film => {
   const {title, episode_id, opening_crawl, release_date} = film
-  const filmLi = document.createElement("li")
-  filmLi.innerText = `${title}: Episode ${episode_id}
+  //const filmLi = document.createElement("li")
+  const filmCard = document.createElement("div");
+  filmCard.className = ("card")
+  filmCard.innerText = `${title}: Episode ${episode_id}
 
     ${opening_crawl}
 
     Released ${release_date}`
-  itemList.append(filmLi)
+  listCollection.append(filmCard)
 }
 
 const renderEachStarship = ship => {
   const {name, model, starship_class} = ship
-  const shipLi = document.createElement("li")
-  shipLi.innerText = `${name} 
+  //const shipLi = document.createElement("li")
+  shipCard = document.createElement("div")
+  shipCard.className = ("card")
+  shipCard.innerText = `${name} 
     Model: ${model}
     Class: ${starship_class}`
-  itemList.append(shipLi)
+  listCollection.append(shipCard)
 }
 
 const renderEachPlanet = planet => {
   const {name, terrain, population, climate} = planet
-  const planetLi = document.createElement("li")
-  planetLi.innerText = `${name} 
+  //const planetLi = document.createElement("li")
+  planetCard = document.createElement("div")
+  planetCard.className = ("card")
+  planetCard.innerText = `${name} 
     Terrain: ${terrain}
     Population: ${population}
     Climate: ${climate}`
-  itemList.append(planetLi)
+  listCollection.append(planetCard)
+}
+
+//--------------first try at card--------might delete
+const renderCard = function(elem) {
+  const listCollection = document.getElementById("list-collection");
+    console.log(listCollection)
+  elem.forEach(card => {
+    
+    divCard.id = `${card.name}`
+
+    const h2 = document.createElement("h2")
+    h2.innerText = card.name;
+                    //adding to the card
+    divCard.append(h2)
+    listCollection.append(divCard)
+    
+  })
 }
 
 //EVENT LISTENERS-------------------------------

@@ -19,6 +19,7 @@ const filmsBtn = document.getElementById("films-btn")
 const starshipsBtn = document.getElementById("starships-btn")
 const planetsBtn = document.getElementById("planets-btn")
 const listCollection = document.getElementById("list-collection")
+const likeBtn  = document.createElement("btn")
 
 
 //EVENT HANDLERS / FETCH HANDLERS-----------------------------
@@ -90,14 +91,24 @@ const renderEachPerson = person => {
   //const personLi = document.createElement("li")
   const characterCard = document.createElement("div");
   characterCard.className = ("card")
-  //const charName = document.createElement("h3")
-  //charName.textContent = `${person.name}`;
+  characterCard.id = `${name}`
+  const img = document.createElement("img")
+  img.src = 'https://starwars-visualguide.com/assets/img/characters/1.jpg'
+  
+  likeBtn.className = "like-btn"
+  likeBtn.innerText = "Like!"
+  const likeNum = document.createElement("h3")
+  likeNum.innerText = "0"
+
    characterCard.innerText = `${name}
    Gender: ${gender}
    Hair: ${hair_color}
    Skin: ${skin_color}
    Height: ${height}`
   //itemList.append(personLi)
+  characterCard.append(img)
+  characterCard.append(likeNum)
+  characterCard.append(likeBtn)
   listCollection.append(characterCard)
 }
 
@@ -137,26 +148,15 @@ const renderEachPlanet = planet => {
   listCollection.append(planetCard)
 }
 
-//--------------first try at card--------might delete
-const renderCard = function(elem) {
-  const listCollection = document.getElementById("list-collection");
-    console.log(listCollection)
-  elem.forEach(card => {
-    
-    divCard.id = `${card.name}`
-
-    const h2 = document.createElement("h2")
-    h2.innerText = card.name;
-                    //adding to the card
-    divCard.append(h2)
-    listCollection.append(divCard)
-    
-  })
+function increaseLikeCount (event) {
+  debugger
+  const likeElement = event.target.previousElementSibling
+  likeElement.innerText = parseInt(likeElement.innerText) + 1
 }
-
 //EVENT LISTENERS-------------------------------
 
 peopleBtn.addEventListener("click", fetchAllPeople)
 filmsBtn.addEventListener("click", fetchAllFilms)
 starshipsBtn.addEventListener("click", fetchAllStarships)
 planetsBtn.addEventListener("click", fetchAllPlanets)
+likeBtn.addEventListener("click", increaseLikeCount)

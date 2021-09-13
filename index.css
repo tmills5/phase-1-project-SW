@@ -45,8 +45,10 @@ header {
 /*---------------people list div-----------------*/
 #list-collection {
   margin: 2rem;
+  justify-content: space-around;
 }
 .card {
+  
   background-color: white;
   text-align: center;
   border: grey solid 1px;
@@ -58,8 +60,26 @@ header {
   box-shadow: 3px 4px #e04b52
 }
 
+img {
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+}
+
+.like-btn {
+  position: relative;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  height: 2rem;
+  width: 75%;
+  color: rgba(48, 1, 36, 0.959);
+  font-size: 18px;
+  justify-self: center;
+}
+
 h3 {
-  color:rgba(138, 226, 30, 0.873)
+  color:black
 }
 #item-list {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -68,9 +88,4 @@ h3 {
   text-align: center;
   list-style-type: none;
   padding: 70px;
-}
-
-li {
-  font-size: 35px;
-  padding: 10px;
 }
